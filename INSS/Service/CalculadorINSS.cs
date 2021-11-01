@@ -12,22 +12,29 @@ namespace INSS.Service
     {
         public decimal CalcularDesconto(DateTime data, decimal salario)
         {
-            decimal valorDescontoINSS = 0;
-            string ano = data.Year.ToString();
-
-            BuscarTabelaINSS buscarTabelaINSS = new BuscarTabelaINSS();
-            TabelaINSS tabelaINSS = buscarTabelaINSS.BuscarTabelaAliquotaINSS(ano,salario);
-
-            if(tabelaINSS.Teto == 0)
+            try
             {
-                valorDescontoINSS = ((salario * tabelaINSS.Aliquota) / 100);
-            }
-            else
-            {
-                valorDescontoINSS = tabelaINSS.Teto;
-            }
+                decimal valorDescontoINSS = 0;
+                string ano = data.Year.ToString();
 
-            return valorDescontoINSS;
+                BuscarTabelaINSS buscarTabelaINSS = new BuscarTabelaINSS();
+                TabelaINSS tabelaINSS = buscarTabelaINSS.BuscarTabelaAliquotaINSS(ano, salario);
+
+                if (tabelaINSS.Teto == 0)
+                {
+                    valorDescontoINSS = ((salario * tabelaINSS.Aliquota) / 100);
+                }
+                else
+                {
+                    valorDescontoINSS = tabelaINSS.Teto;
+                }
+
+                return valorDescontoINSS;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
