@@ -1,0 +1,6 @@
+D:\Projetos Visual Studio\INSS\bin\Debug\INSS.dll
+D:\Projetos Visual Studio\INSS\bin\Debug\INSS.pdb
+D:\Projetos Visual Studio\INSS\obj\Debug\INSS.csprojAssemblyReference.cache
+D:\Projetos Visual Studio\INSS\obj\Debug\INSS.csproj.CoreCompileInputs.cache
+D:\Projetos Visual Studio\INSS\obj\Debug\INSS.dll
+D:\Projetos Visual Studio\INSS\obj\Debug\INSS.pdb
