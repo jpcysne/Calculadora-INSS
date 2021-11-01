@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace INSS.Service
 {
-    class CalculadorINSS : ICalculadorInss
+    public class CalculadorINSS : ICalculadorInss
     {
         public decimal CalcularDesconto(DateTime data, decimal salario)
         {
