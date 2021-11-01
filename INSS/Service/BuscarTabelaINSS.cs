@@ -28,7 +28,7 @@ namespace INSS.Service
                     tabelaINSS = tabelaINSSAbstract.CalculoAliquota(salario);
                     break;
                 default:
-                    break;
+                    throw new Exception("Não foi Encontrado a Tabela do INSS para o Ano Informado");
             }
 
             return tabelaINSS;
